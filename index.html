@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arena Kanoa | Esportes e Eventos em Sete Quedas-MS</title>
+<meta name="description" content="Arena Kanoa: 2 quadras de areia cobertas para beach tennis, vôlei de praia e futevôlei, barracão para eventos com estrutura para 100 pessoas, quiosque, área gourmet, campo e parquinho. Parque das Roseiras, Sete Quedas-MS.">
+<meta property="og:title" content="Arena Kanoa · Esportes e Eventos">
+<meta property="og:description" content="Quadras de areia cobertas e espaço completo para o seu evento em Sete Quedas-MS.">
+<meta property="og:image" content="https://arenakanoa.com.br/img/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4E4C8">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: uma coluna, foto grande de abertura, faixas alternando areia e papel, como uma placa de praia */
+:root{
+  --sand:#F4E4C8; --paper:#FBF6EC; --ink:#2B2116; --muted:#6E5E4C; --line:#E2D2B4;
+  --sea:#1E5BB8; --sun:#FF6A13; --white:#FFFFFF;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:18px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.02;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px,6vw,56px);font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+.kicker{font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--sea)}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:60ch}
+:focus-visible{outline:3px solid var(--sea);outline-offset:3px}
+
+/* topo */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.top img{height:44px;width:auto}
+.top nav{display:flex;gap:26px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--sea)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:14px 24px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--ink);color:var(--sand)}
+.btn.sun{background:var(--sun);color:var(--white)}
+.btn.ghost{border-color:var(--ink);color:var(--ink)}
+.btn.small{padding:10px 18px;font-size:14px}
+.btn svg{width:20px;height:20px;flex:none}
+@media (max-width:760px){.top nav .navlink{display:none}}
+
+/* abertura */
+.hero{position:relative;min-height:min(86vh,820px);display:flex;align-items:flex-end;color:var(--white);overflow:hidden;background:var(--ink)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.15) 0%,rgba(20,14,8,.05) 35%,rgba(20,14,8,.78) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-block:120px 64px;display:grid;gap:20px}
+.hero .kicker{color:var(--sand)}
+.hero h1{font-size:clamp(46px,9vw,104px);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;max-width:12ch}
+.hero p{font-size:clamp(17px,2.4vw,21px);max-width:46ch;margin:0;color:#F3EADC}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.hero .btn.ghost{border-color:var(--white);color:var(--white)}
+
+/* números */
+.facts{background:var(--sand);border-bottom:1px solid var(--line)}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.facts li{padding:26px 18px 26px 0;border-right:1px solid var(--line);display:grid;gap:2px}
+.facts li:last-child{border-right:0}
+.facts li+li{padding-left:22px}
+.facts b{font-family:var(--display);font-weight:900;font-size:clamp(26px,3.6vw,38px);line-height:1}
+.facts span{font-size:14.5px;color:var(--muted);font-weight:500}
+@media (max-width:760px){.facts ul{grid-template-columns:1fr 1fr}.facts li:nth-child(2){border-right:0}.facts li:nth-child(-n+2){border-bottom:1px solid var(--line)}.facts li:nth-child(3){padding-left:0}}
+
+section{padding-block:clamp(64px,9vw,110px)}
+.shead{display:grid;gap:14px;margin-bottom:40px}
+
+/* espaços */
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.card{position:relative;border-radius:var(--r);overflow:hidden;background:var(--ink);min-height:300px;grid-column:span 4;color:var(--white);isolation:isolate}
+.card.wide{grid-column:span 8}
+.card.tall{grid-row:span 2}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s ease}
+.card:hover img{transform:scale(1.04)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(20,14,8,.82));z-index:-1}
+.card .txt{position:absolute;left:0;right:0;bottom:0;padding:22px;display:grid;gap:4px}
+.card h3{font-size:26px;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.card p{margin:0;font-size:15px;color:#EFE5D5;max-width:42ch}
+@media (max-width:900px){.card,.card.wide{grid-column:span 6}.card.tall{grid-row:auto}}
+@media (max-width:600px){.card,.card.wide{grid-column:1/-1;min-height:260px}}
+
+/* eventos */
+.eventos{background:var(--sand)}
+.planos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.plano{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;gap:14px;align-content:start}
+.plano h3{font-size:30px;font-weight:900;text-transform:uppercase}
+.plano .tag{justify-self:start;background:var(--sea);color:var(--white);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.plano .tag.sun{background:var(--sun)}
+.plano ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.plano li{display:flex;gap:10px;align-items:flex-start}
+.plano li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--ink);margin-top:10px}
+.plano .when{font-size:15px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px}
+@media (max-width:760px){.planos{grid-template-columns:1fr}}
+
+/* agenda */
+.agenda .cals{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cal{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.cal h3{font-size:24px;font-weight:900;text-transform:uppercase;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.cal h3 small{font-family:var(--body);font-size:14px;font-weight:600;color:var(--muted);letter-spacing:.1em}
+.cg{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.cg .wd{font-size:12px;font-weight:700;text-align:center;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;padding-bottom:2px}
+.cg .d{aspect-ratio:1/0.82;border:1px solid var(--line);border-radius:10px;padding:5px 7px;font-weight:700;font-size:15px;display:flex;flex-direction:column;justify-content:space-between;min-width:0;background:var(--paper)}
+.cg .d.past{opacity:.35}
+.cg .d.res{background:var(--sea);border-color:var(--sea);color:var(--white)}
+.cg .d.res i{font-style:normal;font-size:8.5px;font-weight:800;letter-spacing:.02em;overflow:hidden;white-space:nowrap;text-align:center;background:rgba(255,255,255,.2);border-radius:5px;padding:2px 0}
+.cg .d.hoje{box-shadow:inset 0 0 0 2px var(--ink)}
+.legend{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:18px;font-size:14.5px;color:var(--muted)}
+.legend span{display:inline-flex;gap:8px;align-items:center}
+.legend i{width:16px;height:16px;border-radius:4px;background:var(--sea);display:inline-block}
+.legend i.l{background:var(--paper);border:1px solid var(--line)}
+@media (max-width:760px){.agenda .cals{grid-template-columns:1fr}.cg .d.res i{display:none}}
+
+/* como chegar */
+.chegar{background:var(--ink);color:var(--sand)}
+.chegar .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.chegar h2{color:var(--white)}
+.chegar .kicker{color:var(--sun)}
+.chegar p{color:#E3D6C0}
+.chegar .vid{justify-self:center;width:min(360px,100%);aspect-ratio:9/16;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);border:6px solid #3A2E21;background:#000}
+.chegar video{width:100%;height:100%;object-fit:cover}
+.chegar .addr{display:grid;gap:4px;padding:18px 20px;border:1px solid #4A3C2C;border-radius:14px;margin:20px 0}
+.chegar .addr b{color:var(--white);font-size:18px}
+.chegar .btn.ghost{border-color:var(--sand);color:var(--sand)}
+.chegar .ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.chegar .wrap{grid-template-columns:1fr}.chegar .vid{order:-1}}
+
+/* rodapé */
+footer{background:var(--sand);padding-block:56px 40px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:center}
+footer img{height:84px;width:auto}
+footer .small{font-size:13.5px;color:var(--muted)}
+footer .col{display:grid;gap:6px}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .reveal.pre{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Arena Kanoa, início"><img src="img/logo.png" alt="Arena Kanoa · Esportes e Lazer" width="520" height="305"></a>
+    <nav aria-label="Principal">
+      <a class="navlink" href="#espacos">Espaços</a>
+      <a class="navlink" href="#eventos">Eventos</a>
+      <a class="navlink" href="#agenda">Agenda</a>
+      <a class="navlink" href="#chegar">Como chegar</a>
+      <a class="btn primary small" href="https://ig.me/m/arenakanoa" target="_blank" rel="noopener">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" style="padding:0">
+    <img class="bg" src="img/hero.jpg" alt="Gramado da Arena Kanoa com o barracão e o quiosque no fim da tarde" fetchpriority="high">
+    <div class="wrap">
+      <span class="kicker">Parque das Roseiras · Sete Quedas-MS</span>
+      <h1>Esportes e eventos</h1>
+      <p>Quadras de areia cobertas, barracão para festas com estrutura para 100 pessoas, quiosque, área gourmet e muito gramado, a poucos minutos da cidade.</p>
+      <div class="ctas">
+        <a class="btn sun" href="https://ig.me/m/arenakanoa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          Reservar pelo Direct
+        </a>
+        <a class="btn ghost" href="#agenda">Ver datas reservadas</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap"><ul>
+      <li><b>2</b><span>quadras de areia cobertas</span></li>
+      <li><b>20×20 m</b><span>de barracão livre para eventos</span></li>
+      <li><b>100</b><span>pessoas com estrutura completa</span></li>
+      <li><b>1,47 km</b><span>da saída da cidade</span></li>
+    </ul></div>
+  </div>
+
+  <section id="espacos">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="kicker">Os espaços</span>
+        <h2>Tudo num lugar só</h2>
+        <p class="lead">Do jogo de fim de tarde ao aniversário da família: a Arena tem estrutura para esporte e para festa, com banheiros completos e estacionamento.</p>
+      </div>
+      <div class="grid">
+        <article class="card wide reveal"><img src="img/quadras.jpg" alt="Quadra de areia coberta com rede" loading="lazy"><div class="txt"><h3>Quadras de areia</h3><p>2 quadras cobertas para beach tennis, vôlei de praia e futevôlei. Horários avulsos, turmas fixas, aulas e torneios.</p></div></article>
+        <article class="card tall reveal"><img src="img/quiosque.jpg" alt="Quiosque com telhado colonial, mesa e bancos de madeira" loading="lazy"><div class="txt"><h3>Quiosque</h3><p>Churrasqueira, pia e mesa grande de madeira. Perfeito para festas menores.</p></div></article>
+        <article class="card reveal"><img src="img/barracao.jpg" alt="Barracão amplo com piso de concreto" loading="lazy"><div class="txt"><h3>Barracão</h3><p>20×20 m livres, cobertos, com estrutura para 100 pessoas.</p></div></article>
+        <article class="card reveal"><img src="img/cozinha.jpg" alt="Cozinha planejada com bancada de granito" loading="lazy"><div class="txt"><h3>Área gourmet</h3><p>Cozinha completa, fogão industrial, churrasqueira, forno a lenha e fogão caipira.</p></div></article>
+        <article class="card reveal"><img src="img/campo.jpg" alt="Campo de futebol suíço gramado" loading="lazy"><div class="txt"><h3>Campo suíço</h3><p>Gramado para a pelada do fim de semana.</p></div></article>
+        <article class="card reveal"><img src="img/parquinho.jpg" alt="Parquinho colorido de madeira" loading="lazy"><div class="txt"><h3>Parquinho</h3><p>Diversão garantida para as crianças.</p></div></article>
+        <article class="card reveal"><img src="img/banheiro.jpg" alt="Banheiro com porcelanato e cabines" loading="lazy"><div class="txt"><h3>Banheiros</h3><p>Feminino e masculino, com chuveiro e fraldário.</p></div></article>
+        <article class="card wide reveal"><img src="img/entrada.jpg" alt="Entrada com palmeiras e canteiros" loading="lazy"><div class="txt"><h3>Gramado e estacionamento</h3><p>Espaço aberto, palmeiras e lugar para estacionar com tranquilidade.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="eventos" class="eventos">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="kicker">Para o seu evento</span>
+        <h2>Duas formas de alugar</h2>
+        <p class="lead">Aniversários, casamentos, confraternizações e festas de empresa. Escolha o espaço do tamanho da sua festa.</p>
+      </div>
+      <div class="planos">
+        <article class="plano reveal">
+          <span class="tag">Arena toda</span>
+          <h3>O espaço completo</h3>
+          <ul>
+            <li>Barracão de 20×20 m com estrutura para 100 pessoas</li>
+            <li>Área gourmet com cozinha completa</li>
+            <li>Quiosque, quadras de areia, campo e parquinho</li>
+            <li>Banheiros e estacionamento</li>
+          </ul>
+          <p class="when">Dias de semana, fins de semana e feriados.</p>
+        </article>
+        <article class="plano reveal">
+          <span class="tag sun">Quiosque + quadras</span>
+          <h3>Para festas menores</h3>
+          <ul>
+            <li>Quiosque com churrasqueira, pia e mesa de madeira</li>
+            <li>As 2 quadras de areia liberadas</li>
+            <li>Banheiros e estacionamento</li>
+          </ul>
+          <p class="when">Dias de semana a partir das 17h. Fins de semana o dia todo.</p>
+        </article>
+      </div>
+      <p class="lead" style="margin-top:26px">Valores e disponibilidade pelo Direct do Instagram. <a href="https://ig.me/m/arenakanoa" target="_blank" rel="noopener"><b>Chamar no Direct</b></a></p>
+    </div>
+  </section>
+
+  <section id="agenda" class="agenda">
+    <div class="wrap">
+      <div class="shead reveal">
+        <span class="kicker">Agenda de eventos</span>
+        <h2>Garanta sua data</h2>
+        <p class="lead">Os dias em azul já estão reservados. Não deixe para a última hora: chame no Direct e confirme o seu.</p>
+      </div>
+      <div class="cals" id="cals" aria-live="polite"></div>
+      <div class="legend"><span><i></i>Reservado</span><span><i class="l"></i>Disponível</span><span id="atualizado"></span></div>
+    </div>
+  </section>
+
+  <section id="chegar" class="chegar">
+    <div class="wrap">
+      <div>
+        <span class="kicker">Como chegar</span>
+        <h2 style="margin-top:12px">A só 1,47 km da cidade</h2>
+        <p class="lead">Pegue a saída para o Parque das Roseiras e siga pela Av. Iporã. A Arena fica na Rua Jasmim, no Parque das Roseiras.</p>
+        <div class="addr"><b>Arena Kanoa</b><span>Rua Jasmim, s/n · Parque das Roseiras · Sete Quedas-MS · 79935-000</span></div>
+        <div class="ctas">
+          <a class="btn sun" href="https://www.google.com/maps/dir/?api=1&amp;destination=-23.954076,-55.038612" target="_blank" rel="noopener">Abrir rota no Google Maps</a>
+          <a class="btn ghost" href="https://www.instagram.com/arenakanoa/" target="_blank" rel="noopener">@arenakanoa</a>
+        </div>
+      </div>
+      <div class="vid"><video src="video/rota.mp4" poster="video/rota_poster.jpg" muted loop playsinline preload="none" aria-label="Animação do trajeto da cidade até a Arena Kanoa"></video></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Arena Kanoa" loading="lazy">
+    <div class="col">
+      <b>Arena Kanoa · Esportes e Eventos</b>
+      <span>Rua Jasmim, s/n · Parque das Roseiras · Sete Quedas-MS</span>
+      <span>Reservas pelo Instagram <a href="https://www.instagram.com/arenakanoa/" target="_blank" rel="noopener">@arenakanoa</a></span>
+      <span class="small">Imagens de satélite do vídeo de rota: © Google · Airbus, CNES, Maxar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+// revela as seções ao rolar (o conteúdo já nasce visível sem JS)
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top>innerHeight){el.classList.add('pre');io.observe(el)}});
+})();
+// vídeo da rota toca quando aparece na tela
+(function(){
+  var v=document.querySelector('.chegar video');if(!v||!('IntersectionObserver' in window))return;
+  new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.4}).observe(v);
+})();
+// agenda: mês atual e próximo, a partir de agenda.json (atualizado toda semana)
+(function(){
+  var M=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  var W=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  function pad(n){return String(n).padStart(2,'0')}
+  function hojeISO(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+  function render(res,upd){
+    var hoje=hojeISO(),y=+hoje.slice(0,4),m=+hoje.slice(5,7),meses=[[y,m],m===12?[y+1,1]:[y,m+1]],h='';
+    meses.forEach(function(ym){
+      var Y=ym[0],Mo=ym[1],f=new Date(Y,Mo-1,1).getDay(),n=new Date(Y,Mo,0).getDate(),g='';
+      W.forEach(function(w){g+='<div class="wd">'+w+'</div>'});
+      for(var i=0;i<f;i++)g+='<div></div>';
+      for(var d=1;d<=n;d++){var k=Y+'-'+pad(Mo)+'-'+pad(d),r=res.indexOf(k)>=0,p=k<hoje;
+        g+='<div class="d'+(r&&!p?' res':'')+(p?' past':'')+(k===hoje?' hoje':'')+'">'+d+(r&&!p?'<i>RESERVADO</i>':'')+'</div>'}
+      h+='<div class="cal"><h3>'+M[Mo-1]+'<small>'+Y+'</small></h3><div class="cg">'+g+'</div></div>';
+    });
+    document.getElementById('cals').innerHTML=h;
+    if(upd){var u=upd.split('-');document.getElementById('atualizado').textContent='Atualizado em '+u[2]+'/'+u[1]+'/'+u[0]}
+  }
+  render([],null);
+  fetch('agenda.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(j){render(j.reservados||[],j.atualizado)}).catch(function(){});
+})();
+</script>
+</body>
+</html>
